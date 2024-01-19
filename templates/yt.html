@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>youtube videos downloader</title>
+    <link rel='stylesheet' type='text/css' href="{% static 'yt.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+    <div class='nav1'>
+        <nav>
+            <ol>
+                <li>SHIV<br>youtube video downloader</li>
+                <li><i class="fa fa-youtube-play fa-5x"></i></li>
+            </ol>
+        </nav>
+    </div>
+    <div class='headtext'>
+    <h1>Welcome to youtube video downloader<br><span>Online to Ofline Video Converter</span><p><i class="fa fa-download fa-1x" ></i></p></h1>
+    </div>
+    
+    <form method='post'>
+        {% csrf_token %} 
+        <input type='text' name='links' placeholder='enter your video link here'>
+        <a download><button type='submit'>Download</button></a> 
+        <p>{{c}}</p>
+        {% comment %} <input type='text' value='{{c}}'> {% endcomment %}
+    </form>
+    <div class='steps'>
+		<p>Steps for Downloading Video</p>
+		<ul>
+			<li><img src="/static/img/st1.jpg"><br><span>Step 1<br>Copy Your Youtube video link.</span></li>
+			<li><img src="/static/img/stt2.jpg"><br><span>Step 2<br>Paste your copied Link there.</spam></li>
+			<li><img src="/static/img/stt3.jpg"><br><span>Step 3<br>Click the Download button to get the highest resolution of that link.</spam></li>
+		</ul>
+	</div>
+    <div class='steps1'>
+		<p>Contact-us</p>
+		<ul>
+            <li><a href="#" id="h1"><i class="fa fa-instagram fa-3x" ></i></a></li>
+            <li><a href="" id="h2"><i class="fa fa-whatsapp fa-3x" ></i></a></li>
+            <li><a href="" id="h3"><i class="fa fa-instagram fa-3x" ></i></a></li>
+            
+        </ul>
+    </div>
+</body>
+</html>
